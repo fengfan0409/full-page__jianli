@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>全页面响应简历</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+<div class="skw-pages" id="app">
+  <div class="skw-page skw-page-1 active">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <div class="skw-page__img"></div>
+          <h3>冯帆/Fan Feng</h3>
+          <div class="skw-page__context">
+            <span class="glyphicon glyphicon-map-marker">坐标:北京</span>
+            <span class="glyphicon glyphicon-modal-window">合肥工业大学2016届毕业生</span>
+            <span class="glyphicon glyphicon-send">应聘前端工程师</span>
+          </div>
+          <p class="skw-page__description">Just scroll down</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-2">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">我的技能树</h2>
+          <canvas id="skill-canvas" width="600px" height="300px"></canvas>
+          <p class="skw-page__description">Continue scrolling.</p>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-3">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Demo</h2>
+          <ul class="demo-list list">
+            <li>纯JS实现围棋规则算法:
+              <a href="https://github.com/fengfan0409/chess" target="_blank">https://github.com/fengfan0409/chess</a>
+            </li>
+            <li>借助gulp sass等自动化工具实现编译复杂css效果:
+              <a href="https://github.com/fengfan0409/circle-animate" target="_blank">https://github.com/fengfan0409/circle-animate</a>
+              <a href="https://github.com/fengfan0409/clickCursor" target="_blank">https://github.com/fengfan0409/clickCursor</a>
+            </li>
+            <li>vue写的小游戏demo:
+              <a href="https://github.com/fengfan0409/clearstar" target="_blank">https://github.com/fengfan0409/clearstar</a>
+              <a href="https://github.com/fengfan0409/pintu" target="_blank">https://github.com/fengfan0409/pintu</a>
+            </li>
+            <li>几个自用node.js爬虫:
+              <a href="https://github.com/fengfan0409/pachong" target="_blank">https://github.com/fengfan0409/pachong</a>
+            </li>
+          </ul>
+          <p class="skw-page__description">Continue scrolling.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-4">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Come on yourCompany.push(me)</h2>
+          <ul class="list">
+            <li>电子邮箱 :<a href="mailto:243327096@qq.com"> 243327096@qq.com</a></li>
+            <li>联系电话 :<a href="tel:18632215896"> 18330208236</a></li>
+            <li>Github :<a href="https://github.com/fengfan0409" target="_blank"> 点击进入</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skw-page skw-page-5">
+    <div class="skw-page__half skw-page__half--left">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content"></div>
+      </div>
+    </div>
+    <div class="skw-page__half skw-page__half--right">
+      <div class="skw-page__skewed">
+        <div class="skw-page__content">
+          <h2 class="skw-page__heading">Now Scrolling Back</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://s2.pstatp.com/cdn/expire-1-M/vue/2.5.6/vue.js'></script>
+<script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts-en.min.js"></script>
+    <script  src="js/index.js"></script>
+<script>
+  let canvas=document.getElementById('skill-canvas');
+  let chart=echarts.init(canvas)
+  option = {
+      tooltip: {},
+      radar: {
+          // shape: 'circle',
+          name: {
+              textStyle: {
+                  color: '#ffffff',
+                  // backgroundColor: '#999',
+                  // borderRadius: 3,
+                  // padding: [3, 5]
+              }
+          },
+          indicator: [
+              {text : 'javascript', max  :100 },
+              {text : 'html css', max  : 100},
+              {text : 'vue jquery', max  :100 },
+              {text : 'sass gulp', max  : 100},
+              {text : 'webpack', max  : 100},
+              {text : 'node.js', max  :100 }
+          ],
+          splitLine:{
+              lineStyle:{
+                  color:['#baf5f2','#eaf5ab']
+              }
+          }
+      },
+      series: [{
+          name: 'skill-energy',
+          type: 'radar',
+          // areaStyle: {normal: {}},
+          data : [
+              {
+                  value : [80, 80, 60, 50, 30, 70],
+                  name : '专业技能(skill-energy)'
+              }
+          ]
+      }]
+  };
+  chart.setOption(option)
+</script>
+
+
+</body>
+
+</html>
