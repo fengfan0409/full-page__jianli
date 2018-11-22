@@ -80,9 +80,9 @@ body {
   background-size: cover;
 }
 .glyphicon{
+  display: block;
   font-size: 20px;
-  float: left;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .skw-page__context{
   margin-bottom: 40px;
@@ -92,7 +92,7 @@ body {
   height: 110px;
   background-image: url("../img/photo.png");
   background-size: 110px,110px;
-  border-radius: 55px;
+  border-radius: 50px;
 }
 .list li{
   margin-top: 20px;
